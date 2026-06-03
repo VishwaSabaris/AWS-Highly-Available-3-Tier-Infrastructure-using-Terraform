@@ -13,3 +13,6 @@ output "launch_template_id" {
 output "security_group_id" {
   value = module.security_group.security_group_id
 }
+output "rds_endpoint" {
+  value = module.rds.rds_endpoint
+}

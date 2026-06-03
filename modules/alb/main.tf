@@ -1,7 +1,3 @@
-data "aws_vpc" "default" {
-  default = true
-}
-
 resource "aws_lb" "app_alb" {
   name               = var.alb_name
   internal           = false
@@ -19,7 +15,7 @@ resource "aws_lb_target_group" "app_tg" {
   name     = "${var.alb_name}-tg"
   port     = 80
   protocol = "HTTP"
-  vpc_id   = data.aws_vpc.default.id
+  vpc_id   = var.vpc_id
 
   health_check {
     path                = "/health"

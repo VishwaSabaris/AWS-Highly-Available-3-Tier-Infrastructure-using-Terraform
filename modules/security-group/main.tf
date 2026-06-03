@@ -1,6 +1,7 @@
 resource "aws_security_group" "terraform_sg" {
   name        = var.sg_name
   description = "Allow SSH and HTTP access"
+  vpc_id      = var.vpc_id
 
   ingress {
     description = "SSH Access"

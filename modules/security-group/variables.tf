@@ -5,3 +5,7 @@ variable "sg_name" {
 variable "allowed_cidr" {
   type = list(string)
 }
+
+variable "vpc_id" {
+  type = string
+}
