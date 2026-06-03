@@ -44,9 +44,9 @@ module "asg" {
   security_group_id = module.security_group.security_group_id
   docker_image      = var.docker_image
   subnet_ids        = module.vpc.private_subnet_ids
-  desired_capacity = local.desired_capacity
-  min_size         = local.min_size
-  max_size         = local.max_size
+  desired_capacity  = local.desired_capacity
+  min_size          = local.min_size
+  max_size          = local.max_size
   target_group_arn  = module.alb.target_group_arn
 }
 module "rds" {
